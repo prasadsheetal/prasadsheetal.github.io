@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sheetal Prasad Portfolio</title>
+	<link rel="icon" type="images/favicon.png" href="images/favicon.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+		.image-box {
+			border: 2px solid #333;
+			/* Dark border around the box */
+			padding: 15px;
+			border-radius: 10px;
+			/* Rounded corners for the box */
+			background-color: #f8f9fa;
+			/* Light background color */
+		}
+
+		.hover-image {
+			position: relative;
+			display: inline-block;
+			width: 150px;
+			/* Set square width */
+			height: 150px;
+			/* Set square height */
+			margin: 10px;
+			overflow: hidden;
+			transition: transform 0.3 ease;
+		}
+
+		.hover-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			/* Ensures images maintain aspect ratio inside squares */
+			transition: transform 0.3s ease, opacity 0.3s ease;
+		}
+
+		.hover-image:hover {
+			transform: scale(1.05);
+			/* Slightly zoom the entire container */
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+			/* Add a shadow effect */
+		}
+
+		.hover-image:hover img {
+			transform: scale(1.15);
+			/* Zoom effect for the image */
+			opacity: 0.85;
+			/* Slightly reduce opacity */
+		}
+
+		/* Change image on hover */
+		.hover-image img.hover-hidden {
+			display: none;
+		}
+
+		.hover-image:hover img.hover-hidden {
+			display: block;
+		}
+
+		.hover-image:hover img.hover-visible {
+			display: none;
+		}
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+		.skill-me.image {
+			margin-top: 5px;
+			margin-left: 5px;
+
+		}
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Sheetal Prasad</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#research-section" class="nav-link"><span>Research</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/myface.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Sheetal Prasad</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Engineer  ',
+										'Developer ',
+										'Graduate Student  ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>MS in Computer Science at NYU</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://drive.google.com/file/d/1tim6zeDC_uyDWWOll-XlAcr_QN-SEg8v/view?usp=sharing"
+										class="btn btn-primary py-3 px-4">Resume</a>
+									<a href="https://www.linkedin.com/in/prasadsheetal/"
+										class="btn btn-white btn-outline-white py-3 px-4">Linkedin</a>
+								</p>
+								<!-- <a href="https://www.facebook.com/sheetal.prasad.988" class="btn btn-white btn-outline-white py-3 px-4"><span class="icon-facebook"></span></p> -->
+								<!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex align-items-stretch"> -->
+				<!-- <div class="row d-flex"> -->
+				<div class="col-md-6 col-lg-5 d-flex">
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay">
+							<div class="row">
+								<div class="col-sm-6 col-md-5">
+									<div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									</div>
+								</div>
+								<!-- Details next to profile image -->
+								<div class="col-sm-6 col-md-7">
+									<div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Sheetal Prasad</span></p>
+										<!-- <p><span class="title-s">Experience: </span> <span>2 Years 2 Months</span></p> -->
+										<p><span class="title-s">Address: </span> <span>New York, NY - United
+												States</span></p>
+									</div>
+								</div>
+							</div>
+							<p class="title-s">
+							<h2><b>Skills</h2></b>
+							</p>
+							<div class="row mt-3">
+								<div class="col-md-4 justify-content-center">
+									<div class="hover-image">
+										<!-- <img src="images/1.png" alt="Angular"> -->
+										<img src="images/angular_c.svg" class="img-fluid" alt="Angular">
+									</div>
+								</div>
+								<div class="col-md-4 justify-content-center">
+									<div class="hover-image">
+										<!-- <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Hovered+2"
+											class="img-fluid hover-hidden" alt="Hovered Image 2"> -->
+										<img src="images/azure_c.svg"
+											class="img-fluid" alt="Azure">
+									</div>
+								</div>
+								<div class="col-md-4 justify-content-center">
+									<div class="hover-image">
+										<!-- <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Hovered+3"
+											class="img-fluid hover-hidden" alt="Hovered Image 3"> -->
+										<img src="images/python_c.svg"
+											class="img-fluid" alt="Python">
+									</div>
+								</div>
+								<div class="col-md-4 justify-content-center">
+									<div class="hover-image">
+										<!-- <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Hovered+4"
+											class="img-fluid hover-hidden" alt="Hovered Image 4"> -->
+										<img src="images/javascript_c.svg"
+											class="img-fluid" alt="Javascript">
+									</div>
+								</div>
+								<div class="col-md-4 justify-content-center">
+									<div class="hover-image">
+										<!-- <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Hovered+5"
+											class="img-fluid hover-hidden" alt="Hovered Image 5"> -->
+										<img src="images/java_c.svg"
+											class="img-fluid" alt="java">
+									</div>
+								</div>
+								<div class="col-md-4 justify-content-center">
+									<div class="hover-image">
+										<!-- <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Hovered+6"
+											class="img-fluid hover-hidden" alt="Hovered Image 6"> -->
+										<img src="images/data_vs_c.svg"
+											class="img-fluid" alt="vs">
+									</div>
+								</div>
+								<div class="col-md-12 justify-content-center">
+									<div class="hover-image">
+										<!-- <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Hovered+7"
+											class="img-fluid hover-hidden" alt="Hovered Image 7"> -->
+										<img src="images/ml.svg"
+											class="img-fluid" alt="ai">
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
+
+				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+					<div class="row justify-content-start pb-3">
+						<div class="col-md-12 heading-section ftco-animate">
+
+							<h1 class="big">About</h1>
+							<h2 class="mb-4">About Me</h2>
+
+							<p>With over 2 years of experience as an Angular developer, I specialize in building
+								scalable web applications for the retail and supply chain industry. My work focuses
+								on streamlining operations like inventory tracking and logistics management through
+								real-time data synchronization across devices using Angular and NodeJS. Currently
+								pursuing a Master’s in Computer Science at NYU, I am deepening my expertise in
+								Machine Learning and Big Data to drive innovation, solve complex business
+								challenges, and enhance operational efficiency.</p>
+							<ul class="about-info mt-4 px-md-0 px-2">
+								<!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li> -->
+								<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+								<li class="d-flex"><span>Tools and Libraries:</span> <span>OpenCV,
+										Tensorflow,Sci-Kit,Pandas,NumPy,NodeJS,Spring Boot, REST, Apache
+										Superset</span></li>
+								<li class="d-flex"><span>Database and Cloud:</span> <span>MySQL,MongoDB, PostgreSQL,
+										Azure, IoT</span></li>
+								<li class="d-flex"><span>Interest:</span> <span>Traveling, Photography,
+										Cooking</span></li>
+								<li class="d-flex"><span>Certifications:</span> <span>Microsoft Certified: Azure Developer Associate</span></li>		
+
+							</ul>
+						</div>
+					</div>
+			
+
+				</div>
+
+
+
+			</div>
+		</div>
+		<!-- </div>
+
+
+		</div>
+		</div>
+		</div> -->
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section" style="padding:0em">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Software Developer with 2+ years of experience driving business strategies through data-driven
+						insights. Proven expertise in data science, statistical analysis, machine learning algorithms
+						and project management.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="resume-wrap ftco-animate" style="height:613px">
+						<span class="date">September 2024 - Present</span>
+						<h2>Graduate Teaching Assistant</h2>
+						<span class="position">New york University</span>
+						<p class="mt-4">Introduction to Machine Learning course
+						<ul>
+							<li>Assisted in guiding and grading students for ECE-UY 4563: Introduction to Machine
+								Learning, providing feedback on assignments and mentoring on topics like supervised
+								learning, deep learning, and model optimization.</li>
+							<li>Contributed to course material development and engaged students through lab sessions and
+								one-on-one support for practical implementation.</li>
+							<!-- <li>Integrated Digital Twin with Enterprise Simulation Language, facilitating real-time data
+								synchronization and expanding the
+								simulation framework to handle 50+ complex scenarios without additional resources.</li>-->
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6 col-sm-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May 2022 - July 2024</span>
+						<h2>Software Developer</h2>
+						<span class="position">Tata Consultancy Services (TCS)</span>
+						<p class="mt-4">Retail Strategic Initiatives, Supply Chain
+						<ul>
+							<li>Architected a cutting-edge web application, Cost2Serve, utilizing Angular and NodeJS,
+								incorporating advanced heuristic
+								evaluation techniques that boosted user satisfaction by 30% and slashed page load times
+								by 40%.</li>
+							<li>Optimized web page efficiency, ensuring cross-device compatibility and seamless
+								functionality across 5+ device types.</li>
+							<li>Integrated Digital Twin with Enterprise Simulation Language, facilitating real-time data
+								synchronization and expanding the
+								simulation framework to handle 50+ complex scenarios without additional resources.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6 col-sm-6">
+					<div class="resume-wrap ftco-animate" style="height:613px">
+						<span class="date">Feb 2022 - April 2022</span>
+						<h2>Intern</h2>
+						<span class="position">Tata Consultancy Services (TCS)</span>
+						<p class="mt-4">Retail Strategic Initiatives, Supply Chain
+						<ul>
+							<li>Engineered an Angular library encompassing 15+ chart types using Google Charts, NodeJS,
+								and
+								Angular, reducing chart
+								development time by 50% and streamlining integration by 30%.</li>
+							<li>Implemented across 12+ projects, the library accelerated chart rendering by 40% and
+								garnered
+								praise for its seamless
+								integration and customization capabilities.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">March 2021 - June 2021</span>
+						<h2>Intern</h2>
+						<span class="position">Defence Research and Development Organization (DRDO)</span>
+						<p class="mt-4">Robotics Department
+						<ul>
+							<li>Spearheaded the design of a robotic console by integrating the ESP8266-12E Wi-Fi module
+								with
+								Arduino UNO, facilitating
+								efficient wireless communication and control.</li>
+							<li>Executed rigorous testing protocols, achieving a 90% success rate, ensuring reliable
+								performance under varied conditions.</li>
+							<li>Enhanced usability with an intuitive interface, optimizing control and communication
+								processes within the Robotics
+								Department for diverse robotic applications.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+				<!-- <div class="col-md-4 col-sm-6"></div> -->
+				<!-- <div class="resume-wrap ftco-animate">
+						<span class="date">2021-Present</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">Merkle</span>
+						<p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International. 
+							<ul>
+								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
+								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
+								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
+							</ul>
+						</p>
+					</div> -->
+
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="resume-wrap ftco-animate" style="height:279px">
+						<span class="date">2024-2026</span>
+						<h2>Masters in Computer Science</h2>
+						<span class="position">New York University - Tandon School of Engineering, New York - United
+							States
+						</span>
+						<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2022</span>
+						<h2>Bachelor of Technology</h2>
+						<span class="position">SRM Institute of Science and Technology, Chennai - Tamil Nadu,
+							India</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<br>
+
+
+		<!-- <div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br> -->
+
+
+		<div class="row justify-content-center mt-3">
+			<!-- <div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div> -->
+		</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pob" id="research-section" style="padding:0em">
+		<div class="container">
+			<div class="row justify-content-center mb-1 pb-1">
+
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Research</h1>
+					<h2 class="mb-4">Research</h2>
+					<p>Below are the Paper Publications, Book chapters and Patents.</p>
+				</div>
+
+				<div class="row d-flex">
+
+					<h3> Patents Published</h3>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/1rwwyoxMq_6rC6PZB_hEAdW_9WSs-XabB/view">
+							</a>
+							<div>
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1rwwyoxMq_6rC6PZB_hEAdW_9WSs-XabB/view"
+										style="font-size:20px;">Multi-Functional
+										Aircraft Cabin Seat for Passenger Aircraft using Artificial Intelligence.
+									</a></h3>
+								<p>
+								<ul>
+									<li>Germany Patent</li>
+									<li>Grant Date : 12/2022</li>
+									<li>Application no: 20 2021 106 308.4.</li>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/1ohNk7GkQYmrq0sxe3ZiMJ4Wdw2Qtg4Am/view">
+							</a>
+							<div>
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1ohNk7GkQYmrq0sxe3ZiMJ4Wdw2Qtg4Am/view"
+										style="font-size:20px;">A
+										smart Autonomous Robotic System to Analyze and Clean the Blockage by Dissolving
+										the
+										Stocks in the Drainage System using Artificial Intelligence.</a></h3>
+								<p>
+								<ul>
+									<li>Indian Patent</li>
+									<li>Publication Date : 05/2022</li>
+									<li>Application no: 360669-001</li>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/15JCNuyTg6LQvrFEtN5MaqZGOlJXOjZbg/view">
+							</a>
+							<div>
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/15JCNuyTg6LQvrFEtN5MaqZGOlJXOjZbg/view"
+										style="font-size:20px;">Design
+										a
+										Wireless Network data security system for medical records using Cryptography.
+									</a></h3>
+								<p>
+								<ul>
+									<li>Indian Patent</li>
+									<li>Publication Date : 03/2022</li>
+									<li>Application no: 202211017104 </li>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="hhttps://drive.google.com/file/d/1sN-MzKzroR0Y_Ts9wi-TlpmBc-1F0Rn7/view">
+							</a>
+							<div>
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1sN-MzKzroR0Y_Ts9wi-TlpmBc-1F0Rn7/view"
+										style="font-size:20px;">Real-Time
+										Intelligent System for personalized hospitality service for hotel guests using
+										Machine Learning.</a></h3>
+								<p>
+								<ul>
+									<li>Indian Patent</li>
+									<li>Publication Date : 12/2021</li>
+									<li>Application no: 202111055001</li>
+									</p>
+							</div>
+						</div>
+					</div>
+
+
+					<h3> Papers Published</h3>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://www.scientific.net/AST.124.754">
+							</a>
+							<div>
+								<h3 class="heading"><a href="https://www.scientific.net/AST.124.754"
+										style="font-size:20px;">
+										A Flexible and Investigation Approach for Encrypted Features Space Using Neural
+										Network
+
+									</a></h3>
+								</ul> </i>
+								<p>
+								<ul>
+									<li>Journal : Advances in Science and Technology</li>
+									<li>ISSN : 1662- 0356, Vol. 124, pp 754-761 © 2023
+										Trans Tech Publications Ltd, Switzerland [Scopus]</li>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://ieeexplore.ieee.org/document/9823483">
+							</a>
+							<div>
+								<h3 class="heading"><a href="https://ieeexplore.ieee.org/document/9823483"
+										style="font-size:20px;">
+										Power System
+										Monitoring, Control and Protection for Network, IOT and Cyber Security
+									</a></h3>
+								<p>
+								<ul>
+									<li>2nd International Conference on Advance Computing
+										and
+										Innovative Technologies in Engineering (ICACITE) - IEEE Xplore</li>
+									<li>Publication Date : 04/2022</li>
+									<li>DOI:10.1109/ICACITE53722.2022.9823483 [Scopus] </li>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://www.thedesignengineering.com/index.php/DE/article/view/6150">
+							</a>
+							<div>
+								<h3 class="heading"><a
+										href="https://www.thedesignengineering.com/index.php/DE/article/view/6150"
+										style="font-size:20px;">Detection
+										of
+										Fake Twitter Profile using SVM, Random Forest and Neural Network Models
+									</a></h3>
+								<p>
+								<ul>
+									<li>Publication Date : 11/2021</li>
+									<li>Journal : Design Engineering, Canada [Scopus] </li>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a
+								href="https://www.igi-global.com/chapter/cyber-security-techniques-for-internet-of-things-iot/248161">
+							</a>
+							<div>
+								<h3 class="heading"><a
+										href="https://www.igi-global.com/chapter/cyber-security-techniques-for-internet-of-things-iot/248161"
+										style="font-size:20px;">
+										<ul>Book
+											Title: Quantum Cryptography and the Future of Cyber Security</ul>
+										<ul><i>Chapter : Cyber
+												Security Techniques for Internet of Things (IoT)
+									</a></h3>
+								</ul></i>
+								<p>
+								<ul>
+									<li>ISBN :230719-052746</li>
+									<li>Publication : January,2020 </li>
+									<li>Publisher : IGI Global,
+										USA.
+										[Scopus]</li>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a
+								href="https://www.igi-global.com/chapter/quantum-security-for-iot-to-secure-healthcare-applications-and-their-data/272369">
+							</a>
+							<div>
+								<h3 class="heading"><a
+										href="https://www.igi-global.com/chapter/quantum-security-for-iot-to-secure-healthcare-applications-and-their-data/272369"
+										style="font-size:20px;">
+										<ul>Book Title: Limitations and Future Applications of Quantum Cryptography</ul>
+										<ul><i>Chapter:
+												Quantum Security for IoT to Secure Healthcare Applications and It’s Data
+									</a></h3>
+								</ul></i>
+								</h3>
+								<p>
+								<ul>
+									<li>ISBN:190220-114901</li>
+									<li>Publication : October,2020 </li>
+									<li>Publisher : IGI Global,
+										USA.
+										[Scopus]</li>
+									</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section" id="project-section" style="padding:0em">
+		<div class="container">
+			<div class="row justify-content-center mb-1 pb-5" style="padding: 0rem;margin-bottom: 0 rem;">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-6 col-sm-6 ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpeg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading">File Sharing through BlockChain</a></h3>
+							<p>
+							<ul>
+								<li>Pioneered a decentralized platform for secure file sharing, leveraging smart
+									contracts, decentralized storage, and encryption,
+									while implementing tokenization to drive user engagement by 25% and amplify
+									transactions by 40%.</li>
+								<li>Crafted a scalable, user-centric ecosystem supporting 1,000 concurrent users,
+									featuring automated governance, robust
+									privacy controls, and accelerating new user onboarding by 30%.</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a class="block-20 zoom-effect" style="background-image: url('images/ethical.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a>Ethical
+									Hacking using OWASP</a></h3>
+							<p>
+							<ul>
+								<li>Conducted a comprehensive security assessment of a web application based on OWASP's
+									Top Ten vulnerabilities,
+									employing OWASP ZAP for systematic scanning and uncovering 20+ critical
+									vulnerabilities.</li>
+								<li>Supplemented programmed findings with thorough manual testing, identifying an
+									additional 10 vulnerabilities and
+									compiling a detailed security report with actionable recommendations.</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a></h3>
+                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+              </div>
+            </div>
+          </div> -->
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div> -->
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<!-- <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2><span> </span> </h2>
+					<div class="heading">
+						<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/prasadsheetal" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>New York, NY - United States</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+ 1 (929)-627-5263</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:info@yoursite.com">sheetal.prasad@nyu.edu</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a
+								href="https://drive.google.com/file/d/1tim6zeDC_uyDWWOll-XlAcr_QN-SEg8v/view?usp=sharing">Resume</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a
+									href="https://docs.google.com/forms/d/e/1FAIpQLSeWril0U-O2puv_waR_er4psWBJVW_A4wIe86HdjgIbPpS6mA/viewform"
+									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/prasadsheetal/"><span
+									class="icon-linkedin"></span></a></li>
+						<!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+						<li class="ftco-animate"><a href="https://www.facebook.com/sheetal.prasad.988"><span
+									class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.instagram.com/thegirliegallery/"><span
+									class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
