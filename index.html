@@ -21,66 +21,89 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<style>
-		/* ===== HERO FIXES ===== */
+		/* ===== RESET & BASE ===== */
+		*, *::before, *::after {
+			box-sizing: border-box;
+		}
+
+		/* ===== HERO SECTION ===== */
 		#home-section.hero {
 			position: relative;
 			width: 100%;
-			overflow: visible;
+			overflow: hidden;
+			min-height: 100vh;
 		}
+
 		.hero .home-slider,
 		.hero .slider-item {
-			min-height: 80vh !important;
+			min-height: 100vh !important;
 			width: 100% !important;
+			position: relative;
 		}
+
 		.hero .slider-item > .overlay {
 			position: absolute;
 			top: 0; left: 0; right: 0; bottom: 0;
 			z-index: 0;
 		}
-		.hero .container {
+
+		.hero .container-fluid {
 			position: relative;
 			z-index: 1;
-			max-width: 100% !important;
 			padding: 0 !important;
 			width: 100% !important;
 		}
+
 		.hero .row.slider-text {
 			margin: 0 !important;
-    		width: 100% !important;
-    		min-height: 100vh;
-    		padding-left: 5% !important;
-    		padding-right: 5% !important;
+			width: 100% !important;
+			min-height: 100vh;
+			padding: 80px 5% 40px !important;
+			position: relative;
+			align-items: center;
 		}
-		/* Image takes right 60% */
-		.hero .one-third {
-			width: 550px !important;
-    		height: 550px !important;
-    		position: absolute !important;
-    		top: 70% !important;
-    		right: 8% !important;
-    		transform: translateY(-50%) !important;
-   			border-radius: 50% !important;
-    		background-size: cover !important;
-    		background-position: center top !important;
-		}
-		/* Text takes full width but has right padding so it doesn't overlap image */
-		.hero .one-forth {
-   			width: 100% !important;
-    		padding-left: 0 !important;
-    		padding-right: 50% !important;
-    		padding-top: 30px !important;
-    		padding-bottom: 30px !important;
-    		position: relative !important;
-    		z-index: 2 !important;
-}
 
-		/* ===== ABOUT ===== */
+		/* Hero image - desktop: absolute right circle */
+		.hero .one-third {
+			width: 500px !important;
+			height: 500px !important;
+			position: absolute !important;
+			top: 50% !important;
+			right: 6% !important;
+			transform: translateY(-50%) !important;
+			border-radius: 50% !important;
+			background-size: cover !important;
+			background-position: center top !important;
+			z-index: 0;
+		}
+
+		/* Hero text - desktop */
+		.hero .one-forth {
+			width: 100% !important;
+			padding-left: 0 !important;
+			padding-right: 52% !important;
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+			position: relative !important;
+			z-index: 2 !important;
+		}
+
+		/* ===== TYPING ANIMATION ===== */
+		#typing-animation {
+			font-size: 28px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			white-space: nowrap;
+			display: inline-block;
+		}
+
+		/* ===== ABOUT SECTION ===== */
 		.hover-image {
 			position: relative;
 			display: inline-block;
-			width: 150px;
-			height: 150px;
-			margin: 10px;
+			width: 130px;
+			height: 130px;
+			margin: 8px;
 			overflow: hidden;
 			transition: transform 0.3s ease;
 		}
@@ -98,9 +121,7 @@
 			transform: scale(1.15);
 			opacity: 0.85;
 		}
-		.hover-image img.hover-hidden { display: none; }
-		.hover-image:hover img.hover-hidden { display: block; }
-		.hover-image:hover img.hover-visible { display: none; }
+
 		.about-mf .box-shadow-full { padding-top: 4rem; padding-bottom: 4rem; }
 		.about-mf .about-img { margin-bottom: 2rem; }
 		.about-mf .about-img img { margin-left: 10px; }
@@ -114,21 +135,292 @@
 			background-color: #ffbd39;
 		}
 
-		/* ===== TYPING ===== */
-		#typing-animation {
-			font-size: 30px;
-			font-weight: bold;
-			color: rgb(255, 255, 255);
-			white-space: nowrap;
-			display: inline-block;
-		}
-
 		/* ===== PROJECTS ===== */
 		.zoom-effect {
 			overflow: hidden;
 			transition: transform 0.3s ease-out;
 		}
-		.zoom-effect:hover { transform: scale(1.1); }
+		.zoom-effect:hover { transform: scale(1.05); }
+
+		/* ===== ABOUT INFO LIST ===== */
+		.about-info li {
+			word-break: break-word;
+		}
+		.about-info li span:first-child {
+			min-width: 120px;
+			flex-shrink: 0;
+		}
+
+		/* ===== RESUME WRAP HEIGHT RESET ON MOBILE ===== */
+		@media (max-width: 767px) {
+			.resume-wrap[style*="height"] {
+				height: auto !important;
+			}
+		}
+
+		/* ===================================================
+		   RESPONSIVE BREAKPOINTS
+		=================================================== */
+
+		/* --- Large tablets / small laptops (max 1199px) --- */
+		@media (max-width: 1199px) {
+			.hero .one-third {
+				width: 420px !important;
+				height: 420px !important;
+				right: 4% !important;
+			}
+			.hero .one-forth {
+				padding-right: 48% !important;
+			}
+			#typing-animation {
+				font-size: 24px;
+			}
+		}
+
+		/* --- Tablets (max 991px) --- */
+		@media (max-width: 991px) {
+			.hero .one-third {
+				width: 340px !important;
+				height: 340px !important;
+				top: 55% !important;
+				right: 3% !important;
+			}
+			.hero .one-forth {
+				padding-right: 42% !important;
+			}
+			#typing-animation {
+				font-size: 22px;
+			}
+			.hero .row.slider-text {
+				padding: 100px 4% 40px !important;
+			}
+			.hover-image {
+				width: 100px;
+				height: 100px;
+				margin: 6px;
+			}
+		}
+
+		/* --- Mobile landscape / small tablets (max 767px) --- */
+		@media (max-width: 767px) {
+			/* Stack hero: image on top, text below */
+			.hero .slider-item {
+				min-height: auto !important;
+			}
+			.hero .row.slider-text {
+				flex-direction: column !important;
+				min-height: auto !important;
+				padding: 80px 5% 50px !important;
+				align-items: flex-start !important;
+			}
+
+			/* Image becomes centered top element, not absolute */
+			.hero .one-third {
+				position: relative !important;
+				top: auto !important;
+				right: auto !important;
+				transform: none !important;
+				width: 220px !important;
+				height: 220px !important;
+				margin: 0 auto 30px auto !important;
+				display: block;
+				border-radius: 50% !important;
+				background-size: cover !important;
+				background-position: center top !important;
+			}
+
+			/* Text: full width, no right padding */
+			.hero .one-forth {
+				width: 100% !important;
+				padding-right: 0 !important;
+				padding-left: 0 !important;
+			}
+
+			#typing-animation {
+				font-size: 20px;
+				white-space: normal;
+			}
+
+			.hero .text h1 {
+				font-size: 2rem !important;
+			}
+			.hero .text h2 {
+				font-size: 1.2rem !important;
+			}
+
+			/* Reorder: image first, then text */
+			.hero .one-third {
+				order: -1;
+			}
+
+			/* About section skills grid */
+			.hover-image {
+				width: 85px;
+				height: 85px;
+				margin: 5px;
+			}
+
+			/* Contact boxes stack */
+			.contact-info .col-md-6 {
+				margin-bottom: 20px;
+			}
+
+			/* Resume wrap auto height */
+			.resume-wrap {
+				height: auto !important;
+				margin-bottom: 20px;
+			}
+
+			/* About info list */
+			.about-info li {
+				flex-direction: column;
+			}
+			.about-info li span:first-child {
+				font-weight: 600;
+				margin-bottom: 2px;
+			}
+
+			/* Project images */
+			.block-20 {
+				height: 200px !important;
+			}
+
+			/* Navbar fix */
+			.ftco_navbar .container {
+				padding: 0 15px;
+			}
+
+			/* Section headings */
+			.big {
+				font-size: 60px !important;
+			}
+			.big-2 {
+				font-size: 60px !important;
+			}
+		}
+
+		/* --- Small mobile (max 480px) --- */
+		@media (max-width: 480px) {
+			.hero .one-third {
+				width: 180px !important;
+				height: 180px !important;
+			}
+			.hero .text h1 {
+				font-size: 1.7rem !important;
+			}
+			.hero .text .subheading {
+				font-size: 14px;
+			}
+			#typing-animation {
+				font-size: 18px;
+			}
+			.hover-image {
+				width: 72px;
+				height: 72px;
+				margin: 4px;
+			}
+			.btn {
+				padding: 10px 16px !important;
+				font-size: 13px !important;
+				margin-bottom: 8px;
+			}
+			.big, .big-2 {
+				font-size: 48px !important;
+			}
+			/* Stack buttons on very small screens */
+			.hero .text p {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+		}
+
+		/* --- Very small (max 360px) --- */
+		@media (max-width: 360px) {
+			.hero .one-third {
+				width: 150px !important;
+				height: 150px !important;
+			}
+			.hover-image {
+				width: 60px;
+				height: 60px;
+				margin: 3px;
+			}
+		}
+
+		/* ===== NAVBAR RESPONSIVE ===== */
+		@media (max-width: 991px) {
+			.ftco_navbar .navbar-collapse {
+				background: rgba(0, 0, 0, 0.95);
+				padding: 15px 20px;
+				border-radius: 0 0 8px 8px;
+			}
+		}
+
+		/* ===== GENERAL UTILITY ===== */
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.col-sm-6, .col-md-6, .col-lg-5, .col-lg-7 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		/* Fix overflow on all sections */
+		section {
+			overflow-x: hidden;
+		}
+
+		/* Ensure research/resume sections don't overflow */
+		.resume-wrap ul {
+			padding-left: 20px;
+		}
+		.resume-wrap ul li {
+			word-break: break-word;
+		}
+
+		/* Fix footer social icons on mobile */
+		.ftco-footer-social {
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		/* About section image area responsive */
+		@media (max-width: 767px) {
+			.img-about .overlay {
+				padding: 20px;
+			}
+			.img-about .row {
+				justify-content: center;
+			}
+			.about-img {
+				text-align: center;
+			}
+			.about-img img {
+				margin-left: 0 !important;
+				max-width: 250px;
+			}
+		}
+
+		/* Research section layout fix */
+		#research-section .row.d-flex {
+			padding: 0 15px;
+		}
+		@media (max-width: 767px) {
+			#research-section .resume-wrap {
+				margin: 0 0 20px 0;
+				padding: 15px;
+			}
+		}
+
+		/* Counter/hireme section */
+		@media (max-width: 767px) {
+			.ftco-section.ftco-hireme h4 {
+				font-size: 1.1rem;
+			}
+		}
 	</style>
 </head>
 
@@ -159,16 +451,16 @@
 			<div class="slider-item">
 				<div class="overlay"></div>
 
-				<!-- BACKGROUND IMAGE - positioned absolute on right -->
-				<div class="one-third js-fullheight order-md-last img"
-					style="background-image:url(images/shore.jpg);">
-					<div class="overlay"></div>
-				</div>
-
 				<div class="container-fluid" style="padding:0;">
 					<div class="row d-md-flex no-gutters slider-text align-items-center" data-scrollax-parent="true">
 
-						<!-- TEXT -->
+						<!-- HERO IMAGE -->
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/shore.jpg);">
+							<div class="overlay"></div>
+						</div>
+
+						<!-- HERO TEXT -->
 						<div class="one-forth d-flex align-items-center ftco-animate"
 							data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
@@ -206,7 +498,7 @@
 										class="btn btn-primary py-3 px-4">Resume</a>
 									<a href="https://www.linkedin.com/in/prasadsheetal/"
 										class="btn btn-white btn-outline-white py-3 px-4">Linkedin</a>
-										<a href="https://github.com/prasadsheetal"
+									<a href="https://github.com/prasadsheetal"
 										class="btn btn-primary py-3 px-4">Github</a>
 								</p>
 							</div>
@@ -275,16 +567,16 @@
 									<div class="hover-image">
 										<img src="images/ml.svg" class="img-fluid" alt="ML/AI">
 									</div>
-									</div>
-									<div class="col-md-4 justify-content-center">
-    									<div class="hover-image">
-        							<img src="images/sql.svg" class="img-fluid" alt="SQL">
-    								</div>
 								</div>
 								<div class="col-md-4 justify-content-center">
-    									<div class="hover-image">
-        							<img src="images/react.png" class="img-fluid" alt="REACT">
-    								</div>
+									<div class="hover-image">
+										<img src="images/sql.svg" class="img-fluid" alt="SQL">
+									</div>
+								</div>
+								<div class="col-md-4 justify-content-center">
+									<div class="hover-image">
+										<img src="images/react.png" class="img-fluid" alt="REACT">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -298,9 +590,9 @@
 							<h2 class="mb-4">About Me</h2>
 							<p>With over 2 years of experience as a Software Engineer, I build scalable frontend and full stack systems that prioritize reliability, performance, and clean architecture. My work spans complex UI workflows, REST API integrations, and data-driven backend systems across security and supply chain domains.
 								At Splunk, I owned end-to-end development of structured data workflows using React and TypeScript, strengthening server-state synchronization and improving test stability. Previously at TCS, I worked on AI-driven Cost-to-Serve optimization models and Azure-based logistics systems to enhance operational efficiency.
-								Currently pursuing a Master’s in Computer Science at NYU, I focus on machine learning, distributed systems, and scalable software design. I approach engineering by understanding user behavior, system constraints, and long-term maintainability before writing code.</p>
+								Currently pursuing a Master's in Computer Science at NYU, I focus on machine learning, distributed systems, and scalable software design. I approach engineering by understanding user behavior, system constraints, and long-term maintainability before writing code.</p>
 							<ul class="about-info mt-4 px-md-0 px-2">
-    							<li class="d-flex"><span>Languages:</span> <span>Java, Python, SQL, JavaScript, TypeScript, HTML/CSS</span></li>
+								<li class="d-flex"><span>Languages:</span> <span>Java, Python, SQL, JavaScript, TypeScript, HTML/CSS</span></li>
 								<li class="d-flex"><span>Frameworks:</span> <span>React, Redux, Angular, Node.js, Spring Boot, Flask, FastAPI, Django</span></li>
 								<li class="d-flex"><span>Tools & Libraries:</span> <span>TanStack Query, Cypress, Jest, Webpack, npm, Figma, Postman, Jira, Git</span></li>
 								<li class="d-flex"><span>Cloud & DevOps:</span> <span>Azure, AWS, GCP, Docker, Kubernetes, Jenkins, CI/CD</span></li>
@@ -308,8 +600,8 @@
 								<li class="d-flex"><span>Big Data:</span> <span>Apache Kafka, Spark, Hive, Hadoop</span></li>
 								<li class="d-flex"><span>Data & ML:</span> <span>NumPy, Pandas, Scikit-learn, TensorFlow, OpenCV, Matplotlib</span></li>
 								<li class="d-flex"><span>Leadership:</span> <span>Graduate Orientation Leader — guided incoming graduate students through NYU onboarding</span></li>
-    							<li class="d-flex"><span>Student Government:</span> <span>Alternate Senator at NYU Graduate Student Council</span></li>
-    							<li class="d-flex"><span>Conferences:</span> <span>Grace Hopper Celebration 2025 Attendee</span></li>
+								<li class="d-flex"><span>Student Government:</span> <span>Alternate Senator at NYU Graduate Student Council</span></li>
+								<li class="d-flex"><span>Conferences:</span> <span>Grace Hopper Celebration 2025 Attendee</span></li>
 							</ul>
 						</div>
 					</div>
@@ -338,24 +630,24 @@
 
 			<div class="row">
 				<div class="col-md-6 col-sm-6">
-					<div class="resume-wrap ftco-animate" style="height:613px">
+					<div class="resume-wrap ftco-animate">
 						<span class="date">September 2025 - Present</span>
 						<h2>Graduate Teaching Assistant</h2>
 						<span class="position">New York University</span>
 						<p class="mt-4">Management of Technology - Capstone
 						<ul>
 							<li>Support 50+ graduate students in the Technology Management & Innovation program</li>
-							<li>CAssist with course design, project development surveys, testing, and technical coordination for capstone initiatives.</li>
+							<li>Assist with course design, project development surveys, testing, and technical coordination for capstone initiatives.</li>
 							<li>Provide structured guidance on project execution, ensuring alignment between innovation strategy and management frameworks.</li>
 						</ul>
 						</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6">
-					<div class="resume-wrap ftco-animate" style="height:613px">
+					<div class="resume-wrap ftco-animate">
 						<span class="date">September 2025 - December 2025</span>
 						<h2>Software Engineer Intern</h2>
-						<span class="position">Splunk(Cisco Systems)</span>
+						<span class="position">Splunk (Cisco Systems)</span>
 						<p class="mt-4">Splunk Security Orchestration, Automation and Response (SOAR)
 						<ul>
 							<li>Led end-to-end development of the Custom Lists feature in Splunk SOAR, enabling security analysts to manage structured data within complex workflows.</li>
@@ -367,7 +659,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6">
-					<div class="resume-wrap ftco-animate" style="height:613px">
+					<div class="resume-wrap ftco-animate">
 						<span class="date">September 2024 - December 2024</span>
 						<h2>Graduate Teaching Assistant</h2>
 						<span class="position">New York University</span>
@@ -404,7 +696,7 @@
 				</div>
 
 				<div class="col-md-6 col-sm-6">
-					<div class="resume-wrap ftco-animate" style="height:613px">
+					<div class="resume-wrap ftco-animate">
 						<span class="date">Feb 2022 - April 2022</span>
 						<h2>Intern</h2>
 						<span class="position">Tata Consultancy Services (TCS)</span>
@@ -446,7 +738,7 @@
 
 			<div class="row">
 				<div class="col-md-6 col-sm-6">
-					<div class="resume-wrap ftco-animate" style="height:279px">
+					<div class="resume-wrap ftco-animate">
 						<span class="date">2024-2026</span>
 						<h2>Masters in Computer Science</h2>
 						<span class="position">New York University - Tandon School of Engineering, New York - United States</span>
@@ -534,8 +826,7 @@
 					<div class="resume-wrap ftco-animate">
 						<div class="blog-entry justify-content-end">
 							<div>
-								<h3 class="heading"><a href="https://novapublishers.com/shop/building-intelligent-systems-for-the-future-mastering-the-revolution-in-cognitive-computing/" style="font-size:20px;">Book Title: Building Intelligent Systems for the Future: Mastering the Revolution in Cognitive Computing — <i>Chapter: Overview of Cognitive Computing:
-Historical, Current, and Prospective Views</i></a></h3>
+								<h3 class="heading"><a href="https://novapublishers.com/shop/building-intelligent-systems-for-the-future-mastering-the-revolution-in-cognitive-computing/" style="font-size:20px;">Book Title: Building Intelligent Systems for the Future: Mastering the Revolution in Cognitive Computing — <i>Chapter: Overview of Cognitive Computing: Historical, Current, and Prospective Views</i></a></h3>
 								<ul>
 									<li>DOI: https://doi.org/10.52305/ILJU1110</li>
 									<li>Publication : Jan, 2026</li>
@@ -651,7 +942,7 @@ Historical, Current, and Prospective Views</i></a></h3>
 				</div>
 				<div class="col-md-6 col-sm-6 ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a class="block-20 zoom-effect" href="https://github.com/prasadsheetal/Neighborly---The-Community-Website"style="background-image: url('images/neighborly.png'); height: 250px; display: block;"></a>
+						<a class="block-20 zoom-effect" href="https://github.com/prasadsheetal/Neighborly---The-Community-Website" style="background-image: url('images/neighborly.png'); height: 250px; display: block;"></a>
 						<div class="text mt-3 float-right d-block">
 							<h3 class="heading">Neighborly – The Community Website</h3>
 							<ul>
@@ -748,6 +1039,7 @@ Historical, Current, and Prospective Views</i></a></h3>
 					<br>
 				</div>
 			</div>
+		</div>
 	</section>
 
 	<footer class="ftco-footer ftco-section">
